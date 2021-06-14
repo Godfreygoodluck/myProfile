@@ -1,0 +1,32 @@
+#id_message{
+    height: 120px;
+}
+.nav-item{
+    margin-left: auto;
+    margin-right: auto;
+}
+#ContactNav{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#PortfolioNav{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#SkillsNav{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#AboutNav{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#homeNav{
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#navUl{
+    width: 130%;
+    padding: 0px;
+
+}

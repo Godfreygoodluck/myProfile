@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+    <head>
+        <title>Maha - Personal CV/Resume Template </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Maha Personal cv/resume template for professional and personal website." />
+        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
+        <meta name="developer" content="Md. Siful Islam">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                
+         <!-- FAV AND ICONS   -->
+         <link rel="shortcut icon" href='{% static "assets/images/favicon.ico" %}'>
+         <link rel="shortcut icon" href="{% static 'assets/images/apple-icon.png' %}">
+         <link rel="shortcut icon" sizes="72x72" href="{% static 'assets/images/apple-icon-72x72.png' %}">
+         <link rel="shortcut icon" sizes="114x114" href="{% static 'assets/images/apple-icon-114x114.png' %}">
+         
+         <!-- Google Font-->
+         <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+         <!-- Font Awesome -->
+         <link rel="stylesheet" href="{% static 'assets/icons/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="{% static 'assets/plugins/css/bootstrap.min.css' %}">
+         <!-- Animate CSS-->
+         <link rel="stylesheet" href="{% static 'assets/plugins/css/animate.css' %}">
+         <!-- Owl Carousel CSS-->
+         <link rel="stylesheet" href="{% static 'assets/plugins/css/owl.css' %}">
+         <!-- Fancybox-->
+         <link rel="stylesheet" href="{% static 'assets/plugins/css/jquery.fancybox.min.css' %}">
+         
+         <!-- Custom CSS-->
+         <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+         <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+        <!-- Colors -->
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/blue.css' %}" title="blue">
+        <link rel="stylesheet" href="{% static 'assets/css/colors/defauld.css' %}" title="defauld">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/green.css' %}" title="green">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/blue-munsell.css' %}" title="blue-munsell">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/orange.css' %}" title="orange">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/purple.css' %}" title="purple">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/slate.css' %}" title="slate">
+        <link rel="alternate stylesheet" href="{% static 'assets/css/colors/yellow.css' %}" title="yellow">
+    </head>
+    <body class="dark-vertion black-bg">
+        
+        <!-- Start Loader -->
+        <div class="section-loader">
+            <div class="loader">
+                <div></div>
+                <div></div> 
+            </div>
+        </div>
+        <!-- End Loader -->
+        
+        <!--
+        ===================
+           NAVIGATION
+        ===================
+        -->
+        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav wow fadeInUp" id="mh-header">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ml-auto">
+                                <li class="nav-item active" id="homeNav">
+                                    <a class="nav-link" href="#mh-home">Home</a>
+                                </li>
+                                <li class="nav-item" id="AboutNav">
+                                    <a class="nav-link" href="#mh-about">About</a>
+                                </li>
+                                <li class="nav-item" id="SkillsNav">
+                                   <a class="nav-link" href="#mh-skills">Skills</a>
+                                </li>                             
+                                <li class="nav-item" id="PortfolioNav">
+                                    <a class="nav-link" href="#mh-portfolio">Portfolio</a>
+                                </li>                                 
+                                <li class="nav-item" id="ContactNav">
+                                    <a class="nav-link" href="#mh-contact">Contact</a>
+                                 </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!--
+        ===================
+           Home
+        ===================
+        -->
+        <section class="mh-home" id="mh-home">
+            <div class="home-ovimg">
+                <div class="container">
+                    <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
+                        <div class="col-sm-6">
+                            <div class="mh-header-info">
+                                <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                                    <span>Hello I'm</span>
+                                </div>
+                                
+                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Godfrey C. Goodluck</h2>
+                                <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Developer(DevOps)</h4>
+                                
+                                <ul>
+                                    {% for Contact in contact %}
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:">{{Contact.email }}</a></li>
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="callto:">{{Contact.phone }}</a></li>
+                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i class="fa fa-map-marker"></i><address>{{Contact.address }}</address></li>
+                                    {% endfor %}
+                                </ul>
+                                
+                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                <div class="img-border" style="display: flex; align-items: center; justify-content: center;">
+                                    {% for Profile in profile %}
+                                        <img src="{{Profile.image.url}}" alt=""  class="img-fluid" width="90%"  >
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        
+        <!--
+        ===================
+           ABOUT
+        ===================
+        -->
+        <section class="mh-about" id="mh-about">
+            <div class="container">
+                <div class="row section-separator">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                            <img src="{% static 'assets/images/ab-img.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="mh-about-inner">
+                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
+                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                {% for Profile in profile %}
+                                    {{ Profile.aboutMe}}
+                                {% endfor %}
+                            </p>
+                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                <ul>
+                                    {% for MySkill in mySkill %}
+                                        <li><span>
+                                            {{ MySkill.skill }}
+                                        </span></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"> check out my youtube chanel <i class="fa fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--
+        ===================
+           SERVICE
+        ===================
+        -->
+        <section class="mh-service">
+            <div class="container">
+                <div class="row section-separator">
+                    <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        <h2>What I do</h2>
+                    </div>
+                    {% for What_i_do in what_i_do %}
+                        <div class="col-sm-4">
+                            <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                
+                                <i class={{What_i_do.favicon}} ></i>
+                                <h3>{{What_i_do.H_tag}}</h3>
+                                <p>
+                                    {{What_i_do.text}}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        
+        
+        <!--
+        ===================
+           SKILLS
+        ===================
+        -->
+        <section class="mh-skills" id="mh-skills">
+            <div class="home-v-img">
+                <div class="container">
+                    <div class="row section-separator">
+                        <div class="section-title text-center col-sm-12">
+                            <!--<h2>Skills</h2>-->
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="mh-skills-inner">
+                                <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                    <h3>Technical Skills</h3>
+                                    <div class="each-skills">
+                                        {% for MySkill in mySkill %}
+                                            <div class="candidatos">
+                                                <div class="parcial">
+                                                    <div class="info">
+                                                        <div class="nome">{{ MySkill.skill }}</div>
+                                                        <div class="percentagem-num">{{ MySkill.percentage }}%</div>
+                                                    </div>
+                                                    <div class="progressBar">
+                                                        <div class="percentagem" {{ MySkill.progresBar }}></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                                <h3>Professional Skills</h3>
+                                <ul class="mh-professional-progress">
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="95"></div>
+                                        <div class="pr-skill-name">Communication</div>
+                                    </li>
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="70"></div> 
+                                        <div class="pr-skill-name">Team Work</div>
+                                    </li>
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="90"></div>
+                                        <div class="pr-skill-name">Project Management</div>
+                                    </li> 
+                                    <li>
+                                        <div class="mh-progress mh-progress-circle" data-progress="85"></div>
+                                        <div class="pr-skill-name">Creativity</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--
+        ===================
+           PORTFOLIO
+        ===================
+        -->
+        <section class="mh-portfolio" id="mh-portfolio">
+            <div class="container">
+                <div class="row section-separator">
+                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                        <h3>Recent Portfolio</h3>
+                    </div>
+                    <div class="part col-sm-12">
+                        <div class="portfolio-nav col-sm-12" id="filter-button ">
+                            <ul>
+                                <li data-filter="*" class="current wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <span>All Categories</span></li>
+                                <li data-filter=".Ecommerce" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><span>Ecommerce</span></li>
+                                <li data-filter=".Portfolio" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s"><span>Personal Portfolio</span></li>
+                                <li data-filter=".Blog" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><span>blogs</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                            <div class="portfolioContainer row"  >
+                                {% for Ecommerce in ecommerce %}
+                                    <div class="grid-item col-md-4 col-sm-6 col-xs-12 Ecommerce">
+                                        <figure >
+                                            <img src="{{Ecommerce.photo.url}}" alt="Ecommerce">
+                                            <figcaption class="fig-caption">
+                                                <i class="fa fa-globe"></i>
+                                                <h5 class="title"><a href={{Ecommerce.links}}>visit site</a></h5>
+                                                <span class="sub-title" style="z-index: 2222;"><a href={{Ecommerce.github}} style="z-index: 2222;;" >gitHub</a></span>
+                                            </figcaption>
+                                            
+                                        </figure>
+                                    </div>
+                                {% endfor %}
+                                {% for Portfolio in portfolio %}
+                                    <div class="grid-item col-md-4 col-sm-6 col-xs-12 Portfolio">
+                                        <figure>
+                                            <img src="{{Portfolio.photo.url}}" alt="Portfolio">
+                                            <figcaption class="fig-caption">
+                                                <i class="fa fa-globe"></i>
+                                                <h5 class="title"><a href={{Portfolio.links}}>visit site</a></h5>
+                                                <span class="sub-title" style="z-index: 2222;"><a href={{Portfolio.github}} style="z-index: 2222;;" >gitHub</a></span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                {% endfor %}
+                                {% for Blog in blog %}
+                                   <div class="grid-item col-md-4 col-sm-6 col-xs-12 Blog">
+                                        <figure>
+                                            <img src="{{Blog.photo.url}}" alt="Blog">
+                                            <figcaption class="fig-caption">
+                                                <i class="fa fa-globe"></i>
+                                                <h5 class="title"><a href={{Blog.links}}>visit site</a></h5>
+                                                <span class="sub-title" style="z-index: 2222;"><a href={{Blog.github}} style="z-index: 2222;;" >github</a></span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                {% endfor %}                                                                
+                            </div> <!-- End: .grid .project-gallery -->
+                        </div> <!-- End: .grid .project-gallery -->
+                    </div> <!-- End: .part -->
+                </div> <!-- End: .row -->
+            </div>
+            
+        </section>
+
+        <!--
+        ===================
+           FOOTER 3
+        ===================
+        -->
+        <footer class="mh-footer mh-footer-3" id="mh-contact">
+            <div class="container-fluid">
+                <div class="row section-separator">
+                    <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        <h3>Contact Me</h3>
+                    </div>
+                    <div class="map-image image-bg col-sm-12">
+                        <div class="container mt-30">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 mh-footer-address">
+                                    {% for Contact in contact %}
+                                    <div class="col-sm-12 xs-no-padding">
+                                        <div class="mh-address-footer-item dark-bg shadow-1 media wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                            <div class="each-icon">
+                                                <i class="fa fa-location-arrow"></i>
+                                            </div>
+                                            <div class="each-info media-body">
+                                                <h4>Address</h4>
+                                                <address>
+                                                    {{ Contact.address}}
+                                                </address>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 xs-no-padding">
+                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                                            <div class="each-icon">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </div>
+                                            <div class="each-info media-body">
+                                                <h4>Email</h4>
+                                                <a href=http://{{Contact.email}}>{{Contact.email}}</a><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 xs-no-padding">
+                                        <div class="mh-address-footer-item media dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                            <div class="each-icon">
+                                                <i class="fa fa-phone"></i>
+                                            </div>
+                                            <div class="each-info media-body">
+                                                <h4>Phone</h4>
+                                                <a href="callto:(880)-8976-987">{{Contact.phone}}</a><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                    <form action="/./" method="POST" id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator" > 
+                                        {% csrf_token %}
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                {{ form.name}}
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                {{ form.phone}}
+                                            </div>
+                
+                                            <div class="col-sm-12">
+                                                {{ form.email}}
+                                            </div>
+                
+                                            <div class="col-sm-12" id="messageCon">
+                                                {{ form.message}}
+                                            </div>
+                                            
+                                            <!-- Subject Button -->
+                                            <div class="btn-form col-sm-12">
+                                                <button type="submit" class="btn btn-fill btn-block subBtn" id="form-submit" >
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="text-left text-xs-center">
+                                                <p><a href="templateshub.net">Templates Hub</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="social-icon">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!--
+    ==============
+    * JS Files *
+    ==============
+    -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!-- jQuery -->
+    <script src="{% static 'assets/plugins/js/jquery.min.js' %}"></script>
+    <!-- popper -->
+    <script src="{% static 'assets/plugins/js/popper.min.js' %}"></script>
+    <!-- bootstrap -->
+    <script src="{% static 'assets/plugins/js/bootstrap.min.js' %}"></script>
+    <!-- owl carousel -->
+    <script src="{% static 'assets/plugins/js/owl.carousel.js' %}"></script>
+    <!-- validator -->
+    <script src="{% static 'assets/plugins/js/validator.min.js' %}"></script>
+    <!-- wow -->
+    <script src="{% static 'assets/plugins/js/wow.min.js' %}"></script>
+    <!-- mixin js-->
+    <script src="{% static 'assets/plugins/js/jquery.mixitup.min.js' %}"></script>
+    <!-- circle progress-->
+    <script src="{% static 'assets/plugins/js/circle-progress.js' %}"></script>
+    <!-- jquery nav -->
+    <script src="{% static 'assets/plugins/js/jquery.nav.js' %}"></script>
+    <!-- Fancybox js-->
+    <script src="{% static 'assets/plugins/js/jquery.fancybox.min.js' %}"></script>
+    <!-- Map api -->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+    <!-- isotope js-->
+    <script src="{% static 'assets/plugins/js/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'assets/plugins/js/packery-mode.pkgd.js' %}"></script>
+    <!-- Custom Scripts-->
+    <script src="{% static 'assets/js/map-init.js' %}"></script>
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+
+</html>
